@@ -36,15 +36,43 @@ Les réponses peuvent être subjectives si il y a le signe **(s)** à la fin de 
 Vous pouvez répondre à même ce document ou dans un fichier à part.
 
 - Qu'est-ce que JavaScript vanilla ?
+JavaScript vanilla is a term used to refer to the pure JavaScript (we can say regular/ordinary/plain Javascript). So, it means that is the Javascript WITHOUT additional libraries or frameworks (like jQuery, React, Angular...).
+
 - Qu'est-ce qu'AJAX ?
+AJAX is an acronym that stands for Asynchronous JavaScript and XML, its core function is to help to update the content of the website asynchronously - it means when the user change a small content of the web, he/she doesn't need to reload the entire page.
+
 - Pourquoi JavaScript est parfois mal-aimé des devs ? **(s)**
+From my personnal point of view, there are 2 weak points of the Javascript: 
+1. Security :JavaScript is explicitly added to web pages and client browsers, and the JavaScript code is viewable to the user, others may use it for malicious purposes.
+2. Lack of Debugging Facility:it is not as efficient as other editors like C# editor, it is difficult for the developer to detect the problem.
+
 - Y a-t-il des types en JavaScript ? Si oui, lesquels ?
+Yes, Javascript has many data types: numbers, string, object (includes array), booleans, null and undefined.
+
 - Est-ce que SASS est un langage qui est interprété par les navigateurs ?
+No. 
+SASS in an acronym that stands for syntactically awesome style sheets - it is a CSS pre-processor scripting language. So it is necessary to compile the SASS into the CSS and the browser can use this CSS (only CSS is used by the browser, not SASS)
+
 - Pourquoi peut-on dire que JavaScript est un langage "multi-paradigmes" ? **(s)**
+"Maybe", because JavaScript has functional capabilities and OOP capabilities. 
+However, the core building blocks of a functional program are variables and functions rather than objects and methods. In JavaScript functions are first class which are treated as a data type and can be used like any other value. 
+Moreover, the characteristics/ main features of an Object-oriented programming (Abstraction, Inheritance, Polymorphism, Encapsulation) are not really clear in JS compared with other languages like C# or Java. 
+So, in my opinion, JS is almost a functional programming. 
+
 - En JS, une fonction peut-elle retourner une fonction ?
+Yes, in JavaScript functions are first classes Functions. We can assign function to variable, pass function as argument, return function from another function.
+
 - Est-ce que `alert` existe en Node.JS ?
+I think the method window.alert() is used to show a popup message in the browser (a client-side). However, the Node.JS is the back-end (server side), so we cannot use it.
+
 - Est-ce que `window.console.log === console.log` dans le navigateur ?
+It depends on the Javascript environment. By defautl, in the browser JS environment, 'window' is the global object so it will be 'true'. However, in the NodeJS (there is no 'window') or other non-default browser environments which don't have 'window' => we can't access the 'window' => it will fail.
+
 - Quel est votre aspect préféré de JavaScript ? **(s)**
+In my opinion, there are 2 mains reasons make the JS is a good choice:
+1. Simplicity - JavaScript's syntax is relatively simple to learn and to get started compared to other popular languages like C# or Java.
+2. Popularity & Versatility - JavaScript is used everywhere on the browser side and nowadays on the server (Node JS). So, it is possible to develop an entire JavaScript app from front to back using only JavaScript. It is one of the most popular versatile scripting language.
+
 
 ## Épreuve pratique sur 80pts
 Vous êtes codeuse/codeur JavaScript dans une clinique du centre-ville.

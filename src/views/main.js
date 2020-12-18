@@ -10,12 +10,12 @@ export function innerHTMLMain(array) {
                 <div class="my-card__text">Lieux de production: ${array[i].lieux_de_production}</div>
                 <div class="my-card__text">Technologie: ${array[i].technologie}</div>
                 <div class="my-card__text">Quantité disponible: ${array[i].quantite}</div>
-                <div class="my-card__text">Prix unitaire: ${array[i].prix_unitaire_indollars} $</div>
+                <div class="my-card__text">Prix unitaire: ${array[i].prix} $</div>
                 <div class="my-card__text">Approuvé: ${array[i].approuve}</div>
                 <div class="my-card__text">Quantité réservée: 
                     <input type="number" class = "reservedQuantity" min="0" max="${array[i].quantite}">
-                    <button class ="btn btn--reserver">Réserver</button></div>
-                                  
+                    <button class ="btn btn--reserver">Réserver</button>
+                </div>                                  
             </div>
         </div>
         `;

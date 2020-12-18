@@ -124,5 +124,14 @@ footer {
     &__text {      
       text-align: center;
     }
+
+  }
+  .btnFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      display: inline-block;
+    }
   }
 } 

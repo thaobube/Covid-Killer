@@ -3,17 +3,14 @@ import { vaccins } from './src/data/data';
 import { header } from './src/views/header';
 import { innerHTMLMain, renderMain } from './src/views/main';
 import { innerHTMLFooter, renderFooter } from './src/views/footer';
+import { approvedVaccins, descendingVaccins, ascendingVaccins } from './src/helpers/filterVaccins';
 
 const app = document.getElementById('app');
 
 app.innerHTML = header + renderMain(vaccins) + renderFooter();
 
 const main = document.querySelector('main');
-// console.log(main);
-
-// Filter the approved vaccines:
-const approvedVaccins = vaccins.filter((vaccin) => vaccin.approuve === 'oui');
-// console.log(approvedVaccins);
+const footer = document.querySelector('footer');
 
 let cache = false;
 document.body.addEventListener('click', (e) => {
@@ -39,14 +36,30 @@ document.body.addEventListener('click', (e) => {
     myCart.innerHTML += `
     <div class="row">
         <div class="col"><div class="my-cart__text">${vaccins[id].nom}</div></div>
-        <div class="col"><div class="my-cart__text">${vaccins[id].prix_unitaire_indollars}</div></div>
+        <div class="col"><div class="my-cart__text">${vaccins[id].prix}</div></div>
         <div class="col"><div class="my-cart__text">${input.value}</div></div>
-        <div class="col"><div class="my-cart__text">${vaccins[id].prix_unitaire_indollars * parseInt(input.value)}</div></div>
+        <div class="col"><div class="my-cart__text">${vaccins[id].prix * parseInt(input.value)}</div></div>
     </div>
     `;
   }
   // Event when clicking to the button "Reserver"
   if (e.target.matches('.btn--commande')) {
-    app.innerHTML = 'La commande a bien été enregistrée!';
+    app.innerHTML = '<h3>La commande a bien été enregistrée!</h3>';
+  }
+  // Event when clicking to the button "Annuler la commande"
+  if (e.target.matches('.btn--annuler')) {
+    main.innerHTML = innerHTMLMain(vaccins);
+    footer.innerHTML = innerHTMLFooter();
+  }
+  // Event when sorting by 'Prix"
+  if (e.target.matches('#sortField')) {
+    if (parseInt(e.target.value) === 1) {
+      main.innerHTML = innerHTMLMain(descendingVaccins);
+      console.log(e.target.value);
+    }
+    if (parseInt(e.target.value) === 2) {
+      main.innerHTML = innerHTMLMain(ascendingVaccins);
+      console.log(e.target.value);
+    }
   }
 });

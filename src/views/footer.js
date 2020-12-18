@@ -15,7 +15,10 @@ export function innerHTMLFooter() {
   contentHtml += `
   </div>
   </div>
+  <div class="btnFooter">
   <button class="btn btn--commande">Passer la commande</button>
+  <button class="btn btn--annuler">Annuler la commande</button>
+  </div>
   `;
   return contentHtml;
 }

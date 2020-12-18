@@ -3,7 +3,7 @@ export function innerHTMLMain(array) {
   for (let i = 0; i < array.length; i++) {
     contentHtml += `
         <div class="my-card" id = "${i}">
-            <img class="my-card__img--top" src="${array[i].img}" alt="...">
+            <img class="my-card__img--top" src="images/${array[i].img}" alt="...">
             <div class="my-card__body">
                 <div class="my-card__title">${array[i].nom}</div>
                 <div class="my-card__text">Inventeurs: ${array[i].inventeurs}</div>

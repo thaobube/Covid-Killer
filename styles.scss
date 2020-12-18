@@ -1,5 +1,11 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+@font-face {
+  font-family: "Roboto";
+  src: url("./static/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -8,4 +14,41 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
+  font-family: "Roboto";
+}
+
+
+.my-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.my-card {    
+  display: block;
+  position: relative;      
+  width: 340px;           
+  background-color: white;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  padding-bottom: 5px;
+  margin: 10px;
+  &__img--top {
+      width: 308px;
+      height: 250px;           
+      object-fit: cover; 
+      margin: 15px 15px; 
+  }
+  &__body {
+      margin: 0 15px 25px 15px;
+  }
+  &__title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-align: left;
+      margin: 5px 0;
+  }
+  &__text {
+      text-align: left;
+      margin-bottom: 10px;    
+  }
 }

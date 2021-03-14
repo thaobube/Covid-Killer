@@ -22,14 +22,35 @@ body {
 }
 
 header {
+  .bg-img {
+    height: 50vh;
+    background-image: url(./static/images/bg-top2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
   h1 {
     text-align: center;
-    font-size: 4rem;
-    color: $primary-color;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #2373d2;
+    margin: 0;
+  }
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2373d2;
+    margin: 0;
+    margin-bottom: 100px;
   }
   .list-buttons {
     display: flex;
     justify-content: space-around;
+  }
+  .sorting {
+    #sortField {
+      margin: 15px;
+    }
   }
   margin-bottom: 20px;
 }
@@ -37,14 +58,20 @@ header {
 .btn {
   background-color: $primary-color;
   border: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 3px;
   color: white;  
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
   font-size: 1.05rem;
   font-weight: 700;
-  &--commande {
-    margin: 20px;
+  margin: 15px 15px 0px 15px;
+  cursor: pointer;
+  &--reserver{
+    margin: 0;
+  }
+  &--cache{
+    margin: 15px;
+    padding: 0 5px;
   }
 }
 .btn:disabled {
@@ -90,30 +117,33 @@ header {
 
 
 footer {
-  background-color: rgb(238, 236, 236);
   .my-cart {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-around;
-    // align-items: center;
     padding: 20px;
     margin-top: 30px;
     p {
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       text-align: center;
       margin-top: 20px;
+      color: #2373d2;
     }
-    .row {
+    .row {      
       display: flex;
-      // justify-content: space-around;
+      justify-content: center;
       max-width: 80%;
-      border: $primary-color solid 1px;
+      min-width: 300px;
+      border: $primary-color solid 0.5px;
       margin: 0 auto;
+      text-align: center;
       .col {
-        // flex-grow: 1;
-        margin: 0 auto;
+        width: 20%;
+        .my-cart__title {
+          color: $primary-color;
+        }
+      }
+      .col-1 {
+        width: 40%;
       }
     }  
     &__title, &__total {
@@ -124,7 +154,6 @@ footer {
     &__text {      
       text-align: center;
     }
-
   }
   .btnFooter{
     display: flex;
@@ -133,5 +162,24 @@ footer {
     button {
       display: inline-block;
     }
+    p {
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 20px;
+    }
+  }
+  .total{
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px;
+    color:#2373d2;
+  }
+  .bg-img-footer {
+    height: 15vh;
+    background-image: url(./static/images/bg-bottom.jpg);
+    background-size: cover;
+    background-position: center;
   }
 } 

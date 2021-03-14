@@ -1,6 +1,7 @@
 export const header = `
 <header>  
-    <h1>Covid Killer</h1>
+    <div class="bg-img"></div>
+
     <div class="list-buttons">
     <div class="sorting">
       <button class="btn">Trier par prix</button>
@@ -10,6 +11,6 @@ export const header = `
       </select>
      </div> 
       <button class="btn btn--cache">Cacher les vaccins "non approuvés"</button>
-    </div>
+    </div>    
 </header>
 `;
